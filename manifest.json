@@ -1,4 +1,15 @@
 {
   "name": "Sad Button",
-  "short-name": "sad-button",
+  "short_name": "sad-button",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#111",
+  "description": "A button to press when you are sad",
+  "icons": [
+    {
+      "src": "sad-button.png",
+      "sizes": "240x240",
+      "type": "image/png"
+    }
+  ]
 }

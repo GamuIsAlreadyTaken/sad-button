@@ -6,15 +6,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sad Button</title>
 
-
+  <link rel="stylesheet" href="style.css">
+  <script src="script,js"></script>
 
 </head>
 <body>
   
   <h1>Sad Button</h1>
-  <button>I'm sad 😢</button>
+  <button onclick="hack()">I'm sad 😢</button>
 
   <p>Hola dianaaaa</p>
+
+  <script>
+    let $ = e => document.querySelector(e)
+
+
+    function hack(){
+      $('body').style = 'background-color: #383'
+      $('h1').innerText = 'Has sido Jakeada'
+      $('p').innerText = 'A no ser que seas un microondas, entonces estas segura\n ... \npor ahora'
+    }
+  </script>
 
 </body>
 </html>
