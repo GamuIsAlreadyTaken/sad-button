@@ -1,0 +1,88 @@
+
+
+body{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #84a4e6;
+}
+header{
+  display: flex;
+  margin-bottom: 40px;
+  width: 100vw;
+  text-align: center;
+  justify-content: center;
+}
+main button{
+  width: 80vw;
+  height: 80vw;
+  font-size: 6vw;
+  border: none;
+  background-color: #4363a2;
+  color: white;
+  border-radius: 50%;
+
+  box-shadow: 0 50px 0 0px #060708;
+  transition: 
+        200ms transform ease,
+        200ms box-shadow ease;
+}
+main button:hover{
+  transform: translateY(-10px);
+  box-shadow: 0 60px 0 0px #060708
+}
+main button:active{
+  transform: translateY(50px);
+  box-shadow: 0 0px 0 0px #060708
+}
+
+
+main button span{
+  font-size: 50vw;
+}
+
+.config{
+  border: none;
+  background-color: transparent;
+  background-image: url(cogwheel.svg);
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 50px;
+  
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  transition: 200ms transform ease 
+}
+.config:hover{
+  transform: rotate(35deg);
+}
+.config-panel{
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 200px;
+  background-color: #000;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  border-radius: 5px;
+  padding: 10px;
+  border: 2px #fff solid;
+}
+.config-panel textarea{
+  resize: none;
+}
+.config-panel input:invalid{
+  background-color: #faa;
+}
+.config-panel input,
+.config-panel textarea{
+  border: none;
+  border-radius: 2px;
+  outline: none;
+  margin: 10px;
+  font-size: 20px;
+}

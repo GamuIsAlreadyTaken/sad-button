@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,28 +8,52 @@
   <title>Sad Button</title>
 
   <link rel="stylesheet" href="style.css">
-  <script src="script,js"></script>
+  <script src="script.js"></script>
 
 </head>
-<body>
-  
-  <h1>Sad Button</h1>
-  <button onclick="hack()">I'm sad 😢</button>
 
-  <p>Hola dianaaaa</p>
+<body>
+  <header>
+    <h1>Sad button</h1>
+    <button class="config" onclick="showConfigPanel()"></button>
+  </header>
+  <main>
+    <button onclick="sendMessage()">
+      Toy triste <span>😢</span>
+    </button>
+  </main>
+  <div class="config-panel" tabindex="1">
+
+    <label for="">Enviar</label>
+    <textarea>Toy triste y quiero que hagamos algo</textarea>
+    <label for="">a: </label>
+    <input type="tel" pattern="[0-9\s]{1,12}">
+    <button>Guardar datos</button>
+
+  </div>
+
 
   <script>
-    let $ = e => document.querySelector(e)
+    const $ = e => document.querySelector(e)
+    const configPanel = $('.config-panel')
+    // https://wa.me/{number}?text={url_encoded_text}
 
-    // https://api.whatsapp.com/send?phone={{teleeeeefono}}
+    function sendMessage() {
 
-    function hack(){
-      alert('Que has hecho!')
-      $('body').style = 'background-color: #383'
-      $('h1').innerText = 'Has sido Jakeada'
-      $('p').innerText = 'A no ser que seas un microondas, entonces estas segura\n ... \npor ahora'
     }
+
+    function showConfigPanel() {
+      configPanel.focus()
+    }
+    configPanel.addEventListener('click', () => {
+      configPanel.styles = 'display: flex'
+      // console.log('foco')
+    })
+    configPanel.addEventListener('focusout', () => {
+      configPanel.styles = 'display: none'
+    })
   </script>
 
 </body>
+
 </html>
