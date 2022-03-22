@@ -23,19 +23,19 @@
     </button>
   </main>
   <div class="config-panel" tabindex="1">
-
-    <label for="">Enviar</label>
+    <label>Enviar</label>
     <textarea>Toy triste y quiero que hagamos algo</textarea>
-    <label for="">a: </label>
+    <label>a: </label>
     <input type="tel" pattern="[0-9\s]{1,12}">
     <button>Guardar datos</button>
-
   </div>
+  <div class="cover"></div>
 
 
   <script>
     const $ = e => document.querySelector(e)
     const configPanel = $('.config-panel')
+    const cover = $('.cover')
     // https://wa.me/{number}?text={url_encoded_text}
 
     function sendMessage() {
@@ -43,14 +43,12 @@
     }
 
     function showConfigPanel() {
-      configPanel.focus()
+      configPanel.style = ''
+      cover.style = 'display: block'
     }
-    configPanel.addEventListener('click', () => {
-      configPanel.styles = 'display: flex'
-      // console.log('foco')
-    })
-    configPanel.addEventListener('focusout', () => {
-      configPanel.styles = 'display: none'
+    cover.addEventListener('click', () => {
+      configPanel.style = 'transform: scale(0);'
+      cover.style = 'display: none'
     })
   </script>
 

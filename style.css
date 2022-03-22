@@ -63,15 +63,17 @@ main button span{
   flex-direction: column;
   width: 300px;
   height: 200px;
-  background-color: #000;
+  background-color: #4363a2;
   color: #fff;
   position: absolute;
   top: 50%;
-  z-index: 1;
+  z-index: 2;
   border-radius: 5px;
   padding: 10px;
-  border: 2px #fff solid;
+  border: 2px #000 solid;
+  transition: 150ms transform cubic-bezier(0.55, 0.055, 0.675, 0.19) ;
 }
+
 .config-panel textarea{
   resize: none;
 }
@@ -85,4 +87,14 @@ main button span{
   outline: none;
   margin: 10px;
   font-size: 20px;
+}
+.cover{
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #7777;
+  z-index: 1;
 }
