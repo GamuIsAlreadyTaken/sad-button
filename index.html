@@ -3,11 +3,11 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sad Button</title>
 
   <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.webmanifest">
   <script src="script.js" defer></script>
 
 </head>
@@ -15,17 +15,18 @@
 <body>
   <header>
     <h1>Sad button</h1>
-    <button class="config"></button>
+    <button class="config" title="configuración"></button>
   </header>
   <main>
     <button onclick="sendMessage()">
       Toy triste <span>😢</span>
     </button>
   </main>
+
   <div class="config-panel">
-    <label>Enviar</label>
+    <label for="message">Enviar</label>
     <textarea maxlength="140" id="message">Toy triste y quiero que hagamos algo</textarea>
-    <label>a: </label>
+    <label for="phone">a: </label>
     <input type="tel" id="phone" placeholder="123 456 789">
     <button id="saveButton">Guardar datos</button>
   </div>

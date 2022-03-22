@@ -2,12 +2,12 @@
   "name": "Sad Button",
   "short_name": "sad-button",
   "start_url": "index.html",
-  "display": "standalone",
-  "background_color": "#111",
+  "display": "fullscreen",
+  "background_color": "#84a4e6",
   "description": "A button to press when you are sad",
   "icons": [
     {
-      "src": "sad-button.png",
+      "src": "assets/sad-button.png",
       "sizes": "240x240",
       "type": "image/png"
     }
