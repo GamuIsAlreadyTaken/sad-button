@@ -70,6 +70,5 @@ function sendMessage() {
     return;
   }
   const url = `https://wa.me/${number}?text=${url_encoded_text}`
-  alert(url)
   window.open(url,'whatsapp');
 }
