@@ -22,14 +22,14 @@
       Toy triste <span>😢</span>
     </button>
   </main>
-  <div class="config-panel" tabindex="1">
+  <div class="config-panel" style='transform: scale(0);'>
     <label>Enviar</label>
-    <textarea>Toy triste y quiero que hagamos algo</textarea>
+    <textarea maxlength="140">Toy triste y quiero que hagamos algo</textarea>
     <label>a: </label>
-    <input type="tel" pattern="[0-9\s]{1,12}">
-    <button>Guardar datos</button>
+    <input type="tel" pattern="[0-9\s]{1,12}" placeholder="123 456 789">
+    <button onclick="saveData()">Guardar datos</button>
   </div>
-  <div class="cover"></div>
+  <div class="cover" style='display: none'></div>
 
 
   <script>
@@ -41,15 +41,20 @@
     function sendMessage() {
 
     }
+    function parsePhone(phone){
+      let number = phone.replace(/[^0-9]/g, '')
+    }
 
     function showConfigPanel() {
       configPanel.style = ''
       cover.style = 'display: block'
     }
-    cover.addEventListener('click', () => {
+    function hideConfigPanel() {
       configPanel.style = 'transform: scale(0);'
       cover.style = 'display: none'
-    })
+    }
+
+    cover.addEventListener('click', hideConfigPanel)
   </script>
 
 </body>
