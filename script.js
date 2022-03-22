@@ -69,7 +69,7 @@ function sendMessage() {
     showModal(configPanel, cover)
     return;
   }
-  const url = `https://wa.me/?${number}?text=${url_encoded_text}`
+  const url = `https://wa.me/${number}?text=${url_encoded_text}`
   alert(url)
-  window.location.href = url;
+  window.open(url,'whatsapp');
 }
